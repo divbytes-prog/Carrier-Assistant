@@ -1,170 +1,85 @@
-# Career Assistant - AI-Powered Career Guidance
+# Career Assistant
 
-A modern, AI-powered career guidance platform built with React, TypeScript, and Tailwind CSS. Get personalized career roadmaps, salary insights, and skill development plans.
+A React + TypeScript career-guidance application for exploring job roles, salary ranges, career scope, future prospects, companies, and learning paths through an interactive interface.
 
-## 🚀 Features
+## Features
 
-- **AI-Powered Career Search**: Intelligent job role analysis with comprehensive insights
-- **Interactive Feature Cards**: Explore scope, salary, future prospects, and top companies
-- **Personalized Roadmaps**: Tailored learning paths for students, professionals, and career changers
-- **Real-time Data Integration**: 
-  - YouTube educational content
-  - GitHub repositories
-  - Udemy courses
-  - LinkedIn job listings
-- **AI Chatbot**: 24/7 career guidance support
-- **Modern UI/UX**: Glassmorphism design with smooth animations
-- **Responsive Design**: Mobile-first approach with dark mode support
+- Career-role search and exploration
+- Salary insights for different experience levels
+- Career scope and future-prospect pages
+- Top-company information
+- Student, professional, and curious-user pathways
+- Search-results experience
+- Interactive chatbot interface
+- Responsive UI with animated visual elements
+- Reusable component and context architecture
 
-## 🛠️ Tech Stack
+## Tech stack
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS v4, Custom CSS Variables
-- **Animations**: Motion (Framer Motion)
-- **UI Components**: Custom components with Radix UI primitives
-- **APIs**: YouTube, GitHub, Udemy, LinkedIn (simulated)
-- **Icons**: Lucide React
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Motion
+- Radix UI primitives
+- Lucide React
 
-## 📦 Installation
+## Run locally
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/career-assistant.git
-   cd career-assistant
-   ```
+```bash
+git clone https://github.com/divbytes-prog/launtennis.git
+cd launtennis
+npm install
+npm run dev
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+Vite will print the local development URL, normally:
 
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+```text
+http://localhost:5173
+```
 
-4. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-## 🏗️ Build for Production
+## Build for production
 
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist` directory.
+## Main application areas
 
-## 📁 Project Structure
+The app includes dedicated views for:
 
-```
-career-assistant/
-├── public/                 # Static assets
-├── src/
-│   ├── api/               # API integrations
-│   ├── components/        # React components
-│   │   ├── ui/           # Reusable UI components
-│   │   ├── pages/        # Page components
-│   │   └── figma/        # Figma-specific components
-│   ├── contexts/         # React contexts
-│   ├── styles/           # CSS and styling
-│   ├── guidelines/       # Development guidelines
-│   ├── App.tsx           # Main app component
-│   ├── main.tsx          # Entry point
-│   └── index.css         # Global styles
-├── index.html            # HTML template
-├── package.json          # Dependencies
-├── tailwind.config.js    # Tailwind configuration
-├── tsconfig.json         # TypeScript configuration
-└── vite.config.ts        # Vite configuration
-```
+- Career scope
+- Salary
+- Future prospects
+- Top companies
+- Students
+- Professionals
+- General career exploration
+- About
+- Contact
+- FAQ
+- Support
 
-## 🎨 Design System
+The homepage combines a search-oriented hero, feature sections, audience-specific content, and the chatbot UI.
 
-The project uses a custom design system with:
-- **Navy Blue Color Palette**: Professional and modern
-- **Glassmorphism Effects**: Subtle transparency and blur effects
-- **Typography**: Inter font family with enhanced weights
-- **Component Library**: Custom UI components with consistent styling
-- **Responsive Grid**: Mobile-first responsive design
+## Project structure
 
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-VITE_YOUTUBE_API_KEY=your_youtube_api_key
-VITE_GITHUB_TOKEN=your_github_token
-VITE_OPENAI_API_KEY=your_openai_api_key
+```text
+App.tsx
+components/
+contexts/
+api/
+public/
+src/
+styles/
+guidelines/
 ```
 
-### API Keys
+## Notes
 
-- **YouTube Data API**: Required for educational video content
-- **GitHub API**: For repository recommendations
-- **OpenAI API**: For AI chatbot functionality
-
-## 🚀 Deployment
-
-### Deploy to Vercel
-
-1. Fork this repository
-2. Connect your GitHub account to Vercel
-3. Import the project
-4. Add environment variables
-5. Deploy
-
-### Deploy to Netlify
-
-1. Fork this repository
-2. Connect to Netlify
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-5. Add environment variables
-6. Deploy
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages: `npm install --save-dev gh-pages`
-2. Add to package.json scripts:
-   ```json
-   "homepage": "https://your-username.github.io/career-assistant",
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
-   ```
-3. Run: `npm run deploy`
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Team
-
-**LNMIIT Underdogs**
-- Built with ❤️ by students for students
-- Contact: team@lnmiitunderdogs.com
-
-## 🙏 Acknowledgments
-
-- OpenAI for AI capabilities
-- YouTube, GitHub, and Udemy for educational content APIs
-- Radix UI for accessible component primitives
-- Tailwind CSS for styling framework
-- Motion for smooth animations
-
-## 📞 Support
-
-For support, email support@lnmiitunderdogs.com or join our Discord server.
+Some career and company data in the current project is modeled locally for demonstration and UI exploration rather than being guaranteed live market data.
 
 ---
 
-Made with ❤️ by LNMIIT Underdogs
+Built by [Divyansh Singh](https://github.com/divbytes-prog).
