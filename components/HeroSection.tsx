@@ -1,4 +1,4 @@
-import { Search, Loader2 } from 'lucide-react';
+import { ArrowRight, Search, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { motion } from 'motion/react';
@@ -341,12 +341,12 @@ export function HeroSection() {
           </motion.div>
           
           <motion.p 
-            className="text-xl md:text-2xl font-bold text-slate-700 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-slate-700 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            and let us guide you through your journey to success
+            AI-powered career guidance tailored for the <span className="text-blue-600 font-bold">Indian job market</span>
           </motion.p>
 
           <motion.div 
@@ -373,12 +373,12 @@ export function HeroSection() {
                 onKeyPress={handleKeyPress}
                 onFocus={() => setIsSearchFocused(true)}
                 onBlur={() => setIsSearchFocused(false)}
-                className="flex-1 border-0 bg-transparent text-xl font-medium placeholder:text-slate-500 focus:ring-0 px-8 py-5"
+                className="flex-1 border-0 bg-transparent text-xl px-8 py-5 focus:ring-0 focus:outline-none"
               />
               <Button
                 onClick={handleSearch}
                 disabled={isLoading || !searchQuery.trim()}
-                className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white rounded-xl px-10 py-5 disabled:opacity-50 transition-all duration-300 group text-lg font-bold"
+                className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white rounded-xl px-10 py-5 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 {isLoading ? (
                   <motion.div
@@ -389,8 +389,9 @@ export function HeroSection() {
                   </motion.div>
                 ) : (
                   <>
-                    <Search className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
-                    Explore
+                    <Search className="h-6 w-6 mr-3" />
+                    Explore Career
+                    <ArrowRight className="h-5 w-5 ml-2" />
                   </>
                 )}
               </Button>
@@ -403,19 +404,43 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 1.2 }}
             className="mt-12 flex flex-wrap justify-center gap-4"
           >
-            <span className="text-slate-600 font-semibold text-lg">Popular searches:</span>
-            {['Software Engineer', 'Data Scientist', 'Product Manager', 'UX Designer'].map((term, index) => (
+            <span className="text-slate-600 text-lg mb-2">🔥 Trending careers:</span>
+            {['Software Engineer', 'Data Scientist', 'Product Manager', 'UX Designer', 'Digital Marketing'].map((term, index) => (
               <motion.button
                 key={term}
                 onClick={() => setSearchQuery(term)}
-                className="px-6 py-3 bg-white/70 hover:bg-white/90 text-slate-700 font-medium rounded-full backdrop-blur-sm border border-slate-200/50 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                whileHover={{ y: -3 }}
+                className="px-6 py-3 bg-white/70 hover:bg-white/90 text-slate-700 rounded-full backdrop-blur-sm border border-slate-200/50 transition-all duration-300 hover:scale-105 hover:shadow-md"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
               >
                 {term}
               </motion.button>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            {[
+              { icon: '💼', value: '2M+', label: 'Job Opportunities' },
+              { icon: '🏢', value: '500+', label: 'Top Companies' },
+              { icon: '🚀', value: '50+', label: 'Career Paths' },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.8 + index * 0.1 }}
+                className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-slate-200/30"
+              >
+                <div className="text-4xl mb-2">{stat.icon}</div>
+                <div className="text-3xl text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-slate-600">{stat.label}</div>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
