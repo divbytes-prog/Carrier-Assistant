@@ -19,13 +19,13 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/contexts/*": ["./src/contexts/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/api/*": ["./src/api/*"]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/contexts/*": ["./contexts/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/api/*": ["./api/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "components", "contexts", "api"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
