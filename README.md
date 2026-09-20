@@ -2,6 +2,8 @@
 
 A React + TypeScript career-guidance application for exploring job roles, salary ranges, career scope, future prospects, companies, and learning paths through an interactive interface.
 
+**Live application:** [carrier-assistant.vercel.app](https://carrier-assistant.vercel.app/)
+
 ## Features
 
 - Career-role search and exploration
@@ -27,8 +29,8 @@ A React + TypeScript career-guidance application for exploring job roles, salary
 ## Run locally
 
 ```bash
-git clone https://github.com/divbytes-prog/launtennis.git
-cd launtennis
+git clone https://github.com/divbytes-prog/Carrier-Assistant.git
+cd Carrier-Assistant
 npm install
 npm run dev
 ```
